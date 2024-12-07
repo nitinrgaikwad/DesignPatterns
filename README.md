@@ -13,89 +13,107 @@ This repository contains implementations and explanations of essential software 
 These patterns focus on object creation mechanisms, trying to create objects in a manner suitable to the situation.
 
 - **Singleton**
-  - Ensures a class has only one instance globally
-  - Provides a global point of access to that instance
+  - **Problem**: Need to ensure a class has only one instance and provide global access to it
+  - **Solves**: Resource sharing, managing global state, coordinating system-wide actions
+  - **Example Use Case**: Database connection pools, configuration managers, logging services
 
 - **Factory Method**
-  - Defines an interface for creating objects
-  - Lets subclasses alter the type of objects created
-  - Promotes loose coupling by eliminating the need to bind application-specific classes
+  - **Problem**: Need to create objects without specifying their exact classes
+  - **Solves**: Dependency management when object creation requires complex logic
+  - **Example Use Case**: Creating UI elements based on user preferences, document generators for different formats
 
 - **Abstract Factory**
-  - Provides an interface for creating families of related objects
-  - Useful when a system should be independent of how its products are created
+  - **Problem**: Need to create families of related objects without specifying their concrete classes
+  - **Solves**: System independence from how its products are created, composed, and represented
+  - **Example Use Case**: Creating UI elements for different operating systems, cross-platform toolkit implementations
 
 - **Builder**
-  - Constructs complex objects step by step
-  - Allows the same construction process to create different representations
+  - **Problem**: Need to construct complex objects step by step
+  - **Solves**: Construction of objects that require multiple steps or configurations
+  - **Example Use Case**: Building complex documents, creating complex API requests
 
 - **Prototype**
-  - Creates new objects by cloning an existing object (prototype)
-  - Reduces the need for creating subclasses
+  - **Problem**: Need to create objects based on existing instances
+  - **Solves**: Object creation when instantiation is costly or complex
+  - **Example Use Case**: Creating copies of complex objects, managing document templates
 
 ### 2. Structural Patterns
 
 These patterns explain how to assemble objects and classes into larger structures while keeping these structures flexible and efficient.
 
 - **Adapter**
-  - Converts one interface to another
-  - Allows incompatible interfaces to work together
+  - **Problem**: Incompatible interfaces need to work together
+  - **Solves**: Integration of systems with different interfaces
+  - **Example Use Case**: Third-party library integration, legacy system compatibility
 
 - **Bridge**
-  - Separates abstraction from implementation
-  - Enables independent variation of both
+  - **Problem**: Need to separate abstraction from implementation
+  - **Solves**: Platform independence, avoiding permanent binding between interfaces
+  - **Example Use Case**: Cross-platform GUI toolkits, device driver implementations
 
 - **Composite**
-  - Treats individual objects and compositions uniformly
-  - Creates tree structures of objects
+  - **Problem**: Need to treat individual objects and compositions uniformly
+  - **Solves**: Creation of tree structures and recursive compositions
+  - **Example Use Case**: File system hierarchies, graphics rendering systems
 
 - **Decorator**
-  - Adds new behaviors to objects dynamically
-  - Provides a flexible alternative to subclassing
+  - **Problem**: Need to add behavior to objects dynamically
+  - **Solves**: Extension of object functionality without altering existing code
+  - **Example Use Case**: Adding features to streams, UI component enhancement
 
 - **Facade**
-  - Simplifies complex systems by providing a unified interface
-  - Reduces dependencies between subsystems
+  - **Problem**: Complex system needs a simpler interface
+  - **Solves**: Complexity management in large systems
+  - **Example Use Case**: Library wrappers, unified API for complex subsystems
 
 - **Flyweight**
-  - Shares object instances to save memory
-  - Useful when dealing with a large number of similar objects
+  - **Problem**: Need to support large numbers of similar objects efficiently
+  - **Solves**: Memory usage optimization
+  - **Example Use Case**: Text editors, game character rendering
 
 - **Proxy**
-  - Controls access to objects
-  - Provides a surrogate or placeholder for another object
+  - **Problem**: Need to control access to an object
+  - **Solves**: Access control, lazy initialization, logging
+  - **Example Use Case**: Virtual proxy for large images, access control in security systems
 
 ### 3. Behavioral Patterns
 
 These patterns are concerned with communication between objects, how objects interact and distribute responsibility.
 
 - **Observer**
-  - Notifies multiple objects about state changes
-  - Implements distributed event handling systems
+  - **Problem**: Need to notify multiple objects about changes to another object
+  - **Solves**: One-to-many dependency management
+  - **Example Use Case**: Event handling systems, MVC architecture implementations
 
 - **Strategy**
-  - Defines a family of algorithms
-  - Makes algorithms interchangeable within that family
+  - **Problem**: Need to use different variants of an algorithm
+  - **Solves**: Algorithm selection at runtime
+  - **Example Use Case**: Sorting algorithms, payment processing methods
 
 - **Command**
-  - Encapsulates requests as objects
-  - Parameterizes clients with different requests
+  - **Problem**: Need to decouple sender and receiver of a request
+  - **Solves**: Command queuing, logging, and undoable operations
+  - **Example Use Case**: GUI commands, transaction management
 
 - **Iterator**
-  - Provides sequential access to elements
-  - Hides the underlying representation
+  - **Problem**: Need to access elements of a collection without exposing its structure
+  - **Solves**: Uniform traversal of different collections
+  - **Example Use Case**: Database record traversal, custom collection implementations
 
 - **Template Method**
-  - Defines the skeleton of an algorithm
-  - Lets subclasses override specific steps
+  - **Problem**: Need to define the skeleton of an algorithm while allowing subclasses to redefine certain steps
+  - **Solves**: Code reuse while maintaining algorithm structure
+  - **Example Use Case**: Framework classes, data mining operations
 
 - **Chain of Responsibility**
-  - Passes requests along a chain of handlers
-  - Avoids coupling sender to receiver
+  - **Problem**: Need to pass requests along a chain of handlers
+  - **Solves**: Decoupling of request senders and receivers
+  - **Example Use Case**: Logging frameworks, event handling systems
 
 - **State**
-  - Allows objects to change behavior based on internal state
-  - Makes state-specific behavior explicit
+  - **Problem**: Object behavior needs to change based on internal state
+  - **Solves**: State-dependent behavior management
+  - **Example Use Case**: Vending machines, workflow management
 
 ## Getting Started
 
